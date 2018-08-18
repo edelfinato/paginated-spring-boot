@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Page</title>
+</head>
+<body>
+
+
+<p style="color: red; font-weight: bold" th:if="${error != null}" th:text="${error}"></p>
+
+
+<th:block th:each="it : ${somethings?.content}">
+    <p th:text="${it.id}"></p>
+</th:block>
+
+
+</body>
+</html>
